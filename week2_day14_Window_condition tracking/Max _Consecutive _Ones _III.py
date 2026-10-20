@@ -9,9 +9,9 @@ class Solution(object):
         zc=0
         maxone=0
         for end in range(0,len(nums)):
-            if nums[end]==0:
-                zc+=1
-            while zc>k:
+            if nums[end]==0: 
+                zc+=1 #count the number of zero
+            while zc>k: #if zero count is graeter than zero then we need 
                 if nums[start]==0:
                     zc-=1
                 start+=1

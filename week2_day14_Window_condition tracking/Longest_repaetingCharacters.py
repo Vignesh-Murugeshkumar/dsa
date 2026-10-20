@@ -10,10 +10,10 @@ class Solution(object):
         maxlenght=0
         start=0
         for end in range(len(s)):
-            count[s[end]]=count.get(s[end],0)+1
-            maxfreq=max(maxfreq,count.get(s[end]))
+            count[s[end]]=count.get(s[end],0)+1 #geeting the count of the character at the end index
+            maxfreq=max(maxfreq,count.get(s[end])) # Update the maximum frequency
             while (end-start+1)-maxfreq>k:
-                count[s[start]]-=1
+                count[s[start]]-=1 #checks wheter the window is valid or not
                 start+=1
             maxlenght=max(maxlenght,end-start+1)
         return maxlenght

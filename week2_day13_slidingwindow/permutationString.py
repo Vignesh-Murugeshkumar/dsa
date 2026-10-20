@@ -23,3 +23,6 @@ class Solution(object):
 arr1="ab"
 arr2="eidbaooo" 
 print(Solution().checkInclusion(arr1,arr2))
+
+
+##same logic for Find All Anagrams in a String problem, we just need to return the starting index of the anagrams instead of returning True or False.

@@ -7,8 +7,8 @@ class Solution(object):
         """
         st=set()
         for i in range(len(nums)):
-            if i>k:
-                st.remove(nums[i-k-1])
+            if i>k: 
+                st.remove(nums[i-k-1]) #removing the element which is out of the range of k from the set
             if nums[i]  in st:
                 return True
             st.add(nums[i])

@@ -1,5 +1,5 @@
 def sortwithFre(s):
-    freq={}
+    freq={} # dict to count frequency of each character
     for ch in s:
         if ch in freq:
             freq[ch]+=1
@@ -13,7 +13,7 @@ def sortwithFre(s):
                 chars[i],chars[j]=chars[j],chars[i]
     result=""
     for ch in chars:
-        result+=ch*freq[ch]
+        result+=ch*freq[ch] #to append the character ch freq[ch] times to the result string
     return result
 s="banana"
 print(sortwithFre(s))
