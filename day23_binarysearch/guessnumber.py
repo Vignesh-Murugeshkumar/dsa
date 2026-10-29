@@ -3,9 +3,7 @@
 # @return -1 if num is higher than the picked number
 #          1 if num is lower than the picked number
 #          otherwise return 0
-def guess(num):
-    """Placeholder for the guess API supplied by the problem platform."""
-    raise NotImplementedError("Provide the guess API implementation.")
+# def guess(num):
 
 class Solution(object):
     def guessNumber(self, n):
