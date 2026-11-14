@@ -16,5 +16,5 @@ def countAndSay(n: int) -> str:
         current = "".join(next_term)
 
     return current
-s=5
+s="54"
 print(countAndSay(s))
