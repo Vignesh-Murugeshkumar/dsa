@@ -9,7 +9,7 @@ class Solution(object):
         start=0
         for end in range(len(s)):
             currentChar=s[end]
-            if currentChar in count and count.get(currentChar)>=start: #checks whether the char is already there and the index of the char is gt start
+            if currentChar in count and count[currentChar] >= start: #checks whether the char is already there and the index of the char is gt start
                 start=count[currentChar]+1 #update the start index to the next index of the current char
             count[currentChar]=end #the current char always gets updated to the latest index
             maxCount=max(maxCount,end-start+1)
