@@ -1,0 +1,39 @@
+def customSortString(order, s):
+    rank = {}
+    for i in range(len(order)):
+        rank[order[i]] = i
+    char_ranks = []
+    for ch in s:
+        if ch in rank:
+            char_ranks.append((ch, rank[ch]))
+        else:
+            char_ranks.append((ch, len(order)))
+
+    sorted_chars = mergesort(char_ranks)
+    result = ""
+    for ch, r in sorted_chars:
+        result += ch
+
+    return result
+
+def mergesort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = mergesort(arr[:mid])
+    right = mergesort(arr[mid:])
+    return merge(left, right)
+def merge(left, right):
+    result = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i][1] <= right[j][1]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result += left[i:]
+    result += right[j:]
+    return result
+print(customSortString("cba", "abcd"))  
